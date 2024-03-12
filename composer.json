@@ -69,7 +69,9 @@
         ],
         "serve": "COMPOSER_PROCESS_TIMEOUT=0 php -dzend_extension=xdebug.so -S 127.0.0.1:8080 -t public",
         "app": "php bin/app.php",
-        "page": "php bin/page.php"
+        "page": "php bin/page.php",
+        "migrations:generate": "vendor/bin/doctrine-migrations migrations:generate --configuration=var/doctrine/migrations.php --db-configuration=var/doctrine/migrations-db.php",
+        "migrations:migrate": "vendor/bin/doctrine-migrations migrations:migrate --configuration=var/doctrine/migrations.php --db-configuration=var/doctrine/migrations-db.php"
     },
     "scripts-descriptions": {
         "setup": "Setup the project",
